@@ -1,0 +1,164 @@
+body {
+	margin: 50px;
+}
+
+.snapLine{
+	box-sizing: border-box;
+}
+
+.hSlider .track .snapLine{
+	border-left: 1px solid rgba(255,255,255,0.7);
+	float: left;
+}
+
+.vSlider .track .snapLine{
+	border-top: 1px solid rgba(255,255,255,0.7);
+	float: left;
+}
+
+#sliderDisplay{
+	padding-top: 40px;
+	display: block;
+	margin: auto;
+	width: 400px;
+}
+
+.hSlider{
+	position: relative;
+	margin: auto;
+	width: 300px;
+	height: 20px;
+}
+
+.vSlider{
+	position: relative;
+	margin: auto;
+	height: 300px;
+	max-height: 300px;
+	width: 20px;
+}
+
+
+.track {
+	width: 100%;
+	height: 100%;
+	background: #DDD;
+}
+
+.thumb .tooltip{
+	transition: top 300ms, max-height 300ms, background 300ms;
+
+	position: absolute;
+	top: -7px;
+	left: -15px;
+	background: #0099CC;
+	width: 50px;
+	height: 30px;
+	max-height: 0px;
+	border-radius: 2px;
+	overflow: hidden;
+	text-align: center;
+
+}
+
+.thumb .tooltip div{
+	padding-top: 6px;
+}
+
+.thumb .tooltipPointer{
+	position: absolute;
+
+	transition: border 300ms;
+
+	top: -7px;
+
+	width: 0px;
+	height: 0px;
+
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-radius: 2px;
+
+}
+
+.vSlider .thumb .tooltip{
+	transition: max-width 300ms, background 300ms;
+	max-height: 30px;
+	max-width: 0px;
+	width: 50px;
+	left: 26px;
+	top: -5px;
+}
+
+ .vSlider .thumb .tooltipPointer{
+ 	transition: left 300ms, border 300ms;
+	transform: rotate(90deg);
+	left: 17px;
+	top: 7px;
+ }
+
+.thumb{
+	position: relative;
+}
+
+.hSlider .thumb{
+	transition: left 300ms;
+	width: 20px;
+	height: 100%;
+	background: #0099CC;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.vSlider .thumb{
+	transition: top 300ms;
+	height: 20px;
+	width: 100%;
+	background: #0099CC;
+	position: absolute;
+	left: 0;
+	top: 0;	
+}
+
+.hSlider.active .thumb, .vSlider.active .thumb{
+	background-color: #0CF;
+}
+
+.shortcuts{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.shortcuts a{
+	transition: background 500ms;
+	padding: 3px;
+	text-decoration: none;
+	color: black;
+	border: 1px solid rgba(0,204,255,0.3);
+}
+
+.shortcuts a:hover{
+	background: #0CF;
+}
+
+.SliderValueLabel{
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.vSliderHolder{
+	margin-top: 60px;
+	display: block;
+	width: 50%;
+	float: left;
+}
+
+.hSliderHolder{
+	text-align: center;
+}
+
+.hSliderHolder{
+	margin-top: 20px;
+}
